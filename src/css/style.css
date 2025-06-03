@@ -1,97 +1,97 @@
+/* Reset básico */
 * {
   margin: 0;
   padding: 0;
   outline: 0;
   box-sizing: border-box;
 }
+
+body {
+  background-color: #e2e1de;
+  font-family: "Oswald", sans-serif;
+}
+
 /* --------Header-------- */
 header {
   display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 10px 20px;
   height: 100px;
   background-color: #1d3557;
-  padding: 0px 10px;
-  font-family: "Oswald", sans-serif;
+  flex-wrap: wrap;
 }
-.nome {
-  margin-top: 25px;
+
+header img {
+  max-height: 100px;
+}
+
+.nome h1 {
   color: white;
-  margin-left: 20px;
+  font-size: 1.8rem;
+  margin-left: 10px;
 }
-.video video {
-  margin-top: 20px;
-  width: 100%;
-  max-width: 800px;
-  height: auto;
-  margin-left: 20px;
-  transition: box-shadow 
-}
-body {
-  background-color: #e2e1de;
-}
-.hamburguer button{
+
+.hamburguer button {
   display: flex;
-  margin-left: 1500px;
-  margin-top: 25px;
-  height: 50px;
-  font-size: 24px;
-  cursor: pointer;
+  align-items: center;
+  justify-content: center;
   background: none;
   border: none;
+  cursor: pointer;
+  height: 50px;
   z-index: 999;
 }
+
+.hamburguer img {
+  max-height: 40px;
+}
+
 /* --------NAV-------- */
-nav {
-  display: column;
-  gap: 80px;
-  justify-content: center;
-  border: #1d3557;
-}
-
-nav a {
-  font-size: x-large;
-  text-decoration: none;
-  color: #1d3557;
-  padding: 10px;
-  border: 2px solid gray; 
-  padding: 5px; /
-}
-.hrnav{
-  margin: 0 auto;
-  margin-top: 5px;
-  display: flex;
-  width: 1100px;
-}
-.hrenfeite{
-  margin: 0 auto;
-  margin-top: 4px;
-  display: flex;
-  width: 1200px;
-}
-
 .nav-menu {
   display: none;
   position: absolute;
   top: 100px;
-  right: 1px;
-  height: 100%;
-  width: 400px;
+  right: 0;
+  width: 300px;
   background: white;
   padding: 10px;
   box-shadow: 2px 2px 10px rgba(0, 0, 0, 0.2);
   animation: faderight 0.5s ease-in-out;
+  z-index: 998;
 }
+
 .nav-menu a {
   display: block;
+  font-size: 1.2rem;
   padding: 10px;
-  text-decoration: none;
+  margin-bottom: 8px;
   color: #1d3557;
+  text-decoration: none;
   border: 2px solid gray;
   border-radius: 5px;
   animation: fadeleft 0.5s ease-in-out;
-  
-  
-/* --------efeito-------- */
 }
+
+/* --------Vídeo-------- */
+.video video {
+  display: block;
+  margin: 20px auto;
+  width: 90%;
+  max-width: 800px;
+  height: auto;
+  transition: box-shadow 0.3s;
+}
+
+/* --------Linhas decorativas-------- */
+.hrnav,
+.hrenfeite {
+  width: 90%;
+  max-width: 1200px;
+  margin: 10px auto;
+}
+
+/* --------Animações-------- */
 @keyframes fadeleft {
   from {
     opacity: 0;
@@ -101,26 +101,78 @@ nav a {
     opacity: 1;
     transform: translateX(0);
   }
-/* -------hover--------- */
 }
-.hamburguer button:hover{
-  opacity: 70%;
-}
-.video video:hover {
-  box-shadow: 0px 0px 20px rgba(29, 53, 87, 0.8);
-  filter: brightness(1.0); 
-}
-nav a:hover{
-  opacity: 70%;
-}
-/* -------efeito------- */
+
 @keyframes faderight {
   from {
     opacity: 0;
-    transform: translateX(0px);
+    transform: translateX(-10px);
   }
   to {
     opacity: 1;
-    transform: translateX(10);
+    transform: translateX(0);
+  }
+}
+
+/* --------Efeitos hover-------- */
+.hamburguer button:hover,
+nav a:hover,
+.nav-menu a:hover {
+  opacity: 0.7;
+}
+
+.video video:hover {
+  box-shadow: 0px 0px 20px rgba(29, 53, 87, 0.8);
+}
+
+/* --------Responsividade-------- */
+
+/* Telas até 768px (tablet/celular) */
+@media screen and (max-width: 768px) {
+  header {
+    flex-direction: column;
+    align-items: center;
+    height: auto;
+  }
+
+  .nome h1 {
+    font-size: 1.5rem;
+    text-align: center;
+    margin: 10px 0;
+  }
+
+  .hamburguer {
+    position: absolute;
+    right: 20px;
+    top: 20px;
+  }
+
+  .nav-menu {
+    width: 80%;
+    top: 80px;
+    height: auto;
+  }
+
+  .video video {
+    width: 95%;
+  }
+}
+
+/* Telas muito pequenas, como celulares compactos */
+@media screen and (max-width: 390px) {
+  .nome h1 {
+    font-size: 1.2rem;
+  }
+
+  .hamburguer img {
+    max-height: 30px;
+  }
+
+  .nav-menu a {
+    font-size: 1rem;
+  }
+
+  .video video {
+    width: 90%;
   }
 }
