@@ -155,30 +155,37 @@
   </div>
   <hr>
   <hr>
+  
   <section class="tecnologia">
-    <h1 class="texto-tec">
-      Tecnologias
-    </h1>
-    <div class="alinhar-tec">
-    <div class="tabela">
-      <img src="./src/assets/sensorAgua.webp" alt="sensor">
-      <h1>sensor de agua</h1>
-      <p>gldçgsdfudfusdufodsjnfodshjfhdufhsdfhdshfkdhfhsdkfhsdkhfdshfdisfhgdgdfgdfggfdgfdgdfgfdgdgdfgfdgfdgdgfdgdgk</p>
-      <hr>
-      <hr>
-      <img src="./src/assets/sensorAgua.webp" alt="sensor">
-      <h1>sensor de agua</h1>
-      <p>gldçgsdfudfusdufodsjnfodshjfhdufhsdfhdshfkdhfhsdkfhsdkhfdshfdisfhgdgdfgdfggfdgfdgdfgfdgdgdfgfdgfdgdgfdgdgk</p>
-      <hr>
-      <hr>
-      <img src="./src/assets/sensorAgua.webp" alt="sensor">
-      <h1>sensor de agua</h1>
-      <p>gldçgsdfudfusdufodsjnfodshjfhdufhsdfhdshfkdhfhsdkfhsdkhfdshfdisfhgdgdfgdfggfdgfdgdfgfdgdgdfgfdgfdgdgfdgdgk</p>
+    <h1 class="texto-tec">Tecnologias</h1>
+    
+    <div class="carousel-text-container"> 
+      <div class="carousel-section">
+        <div class="carousel-container">
+          <div class="carousel-wrapper" id="carousel">
+            <img src="./src/assets/sensorAgua.webp" class="carousel-image" alt="Sensores de Água" data-slide="0">
+            <img src="./src/assets/sensorAgua.webp" class="carousel-image" alt="Sistema IoT" data-slide="1">
+            <img src="./src/assets/sensorAgua.webp" class="carousel-image" alt="Inteligência Artificial" data-slide="2">
+          </div>
+        
+          <button class="arrow left" onclick="prevSlide()">&#10094;</button>
+          <button class="arrow right" onclick="nextSlide()">&#10095;</button>
+        </div>
+      </div>
+      
+
+      <div class="text-section">
+        <div class="descricao" id="dynamic-text">
+          <h1 id="text-title">alguma coisa</h1>
+          <p id="text-content">
+          Lorem ipsum dolor sit amet consectetur, adipisicing elit. Excepturi fuga mollitia a ad error rem, inventore quos saepe dolor autem non itaque dolorem vero quidem sit voluptates porro quisquam magni.
+          </p>
+        </div>
+      </div>
     </div>
-    <hr>
-    <hr>
-  </div>
   </section>
+  <hr>
+  
     <script src="./src/js/index.js"></script>
   </body>
 </html>
