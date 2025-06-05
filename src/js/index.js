@@ -111,7 +111,7 @@ document.addEventListener('DOMContentLoaded', () => {
   updateText();
 });
 
-// mudança de cores da pagina 
+
 
 let corPadrao = "#e2e1de";
 const imgPadrao = document.getElementById("mudar-imagem");
@@ -133,4 +133,47 @@ function mudarTema() {
 }
 if (botaoMudarCor && imgPadrao) {
     botaoMudarCor.addEventListener('click', mudarTema);
+}
+// mudança de cores da pagina pt 2
+
+const coresDaFesta = ["#ff0000", "#00ff00", "#0000ff", "#ffff00", "#ff00ff", "#00ffff"];
+
+let festaIntervalId = null;
+
+function trocaDeCores() {
+
+    if (festaIntervalId !== null) {
+        clearInterval(festaIntervalId);
+    }
+
+    let repeticoes = 0;
+    const maxRepeticoes = 30;
+    const intervaloEntreCores = 350; 
+    let i = 0;
+
+    festaIntervalId = setInterval(function() {
+        
+        if (repeticoes >= maxRepeticoes) {
+            clearInterval(festaIntervalId); 
+            festaIntervalId = null; 
+            document.body.style.backgroundColor = '#e2e1de'; 
+            return; 
+        }
+
+        document.body.style.backgroundColor = coresDaFesta[i];
+
+        i++;
+        
+        if (i >= coresDaFesta.length) {
+            i = 0;
+        }
+        repeticoes++;
+
+    }, intervaloEntreCores);
+}
+
+const festaNoSite = document.getElementById("festa");
+
+if (festaNoSite) {
+    festaNoSite.addEventListener("click", trocaDeCores);
 }
