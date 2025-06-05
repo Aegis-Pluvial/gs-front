@@ -30,6 +30,11 @@ header {
   height: 94px;
   background-color: #1d3557;
   flex-wrap: wrap;
+  position: fixed;
+          top: 0;
+          left: 0;
+          width: 100%;
+          z-index: 1000;
 }
 
 header img {
@@ -82,7 +87,7 @@ header img {
 /* --------Vídeo-------- */
 .video video {
   display: block;
-  margin: 20px auto;
+  margin: 10rem auto 4rem;
   width: 90%;
   max-width: 800px;
   height: auto;
@@ -201,6 +206,7 @@ body {
 .secao-solucoes {
   padding-top: 4rem;
   padding-bottom: 4rem;
+  margin: 0px 16px;
 }
 
 .grade-solucoes {
