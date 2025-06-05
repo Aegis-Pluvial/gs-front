@@ -20,6 +20,7 @@ body {
   background-color: #e2e1de;
   font-family: "Montserrat", sans-serif;
   color: #333;
+  transition: background-color 1s ease;
 }
 
 /* --------Header-------- */
