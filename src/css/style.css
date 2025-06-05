@@ -27,20 +27,13 @@ header {
   align-items: center;
   justify-content: space-between;
   padding: 10px 20px;
-  height: 125px;
+  height: 94px;
   background-color: #1d3557;
   flex-wrap: wrap;
 }
 
 header img {
-  max-height: 100px;
-}
-
-.nome h1 {
-  color: white;
-  font-size: 1.8rem;
-  margin-left: 10px;
-
+  max-height: 78px;
 }
 
 .hamburguer button {
@@ -56,6 +49,7 @@ header img {
 
 .hamburguer img {
   max-height: 40px;
+  padding: 0px 28px;
 }
 
 /* --------NAV-------- */
@@ -302,16 +296,19 @@ body {
   margin-top: 0.25rem;
   margin-right: 0.5rem;
 }
+.background2 {
+  background-color: #0786b1;
+}
 .titulo-solucao h1 {
   display: flex;
-  margin: 0 auto;
+  margin: auto;
+  padding-top: 2.12rem;
   text-align: center;
   z-index: 994;
-  color: #1d3557;
+  color: #ffffff;
+  font-size: 42px;
 }
-.background2 {
-  background-color: white;
-}
+
 .icone-cartao-solucao img {
   height: 60px;
   border-radius: 100%;
