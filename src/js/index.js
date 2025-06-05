@@ -110,19 +110,27 @@ function nextSlide() {
 document.addEventListener('DOMContentLoaded', () => {
   updateText();
 });
+
 // mudança de cores da pagina 
 
+let corPadrao = "#e2e1de";
+const imgPadrao = document.getElementById("mudar-imagem");
+const botaoMudarCor = document.getElementById('mudar-cor');
+const iconeSol = "./src/assets/Sol.png";
+const iconeLua = "./src/assets/Lua.png";
 
-document.getElementById('change-color').addEventListener('click', function() {
-       
-      let corPadrao = "#e2e1de"
 
-       if (corPadrao === "e2e1de"){
-          document.body.style.backgroundColor = "#000000";
-          corPadrao = "#000000"
-       }
-       else{
-          document.body.style.backgroundColor = "#e2e1de";
-          corPadrao = "#e2e1de"
-       }
-     });
+function mudarTema() {
+    if (corPadrao === "#e2e1de") {
+        document.body.style.backgroundColor = "#001233";
+        if (imgPadrao) imgPadrao.setAttribute("src", iconeSol);
+        corPadrao = "#001233";
+    } else {
+        document.body.style.backgroundColor = "#e2e1de";
+        if (imgPadrao) imgPadrao.setAttribute("src", iconeLua);
+        corPadrao = "#e2e1de";
+    }
+}
+if (botaoMudarCor && imgPadrao) {
+    botaoMudarCor.addEventListener('click', mudarTema);
+}
