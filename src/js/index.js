@@ -110,4 +110,19 @@ function nextSlide() {
 document.addEventListener('DOMContentLoaded', () => {
   updateText();
 });
+// mudança de cores da pagina 
 
+
+document.getElementById('change-color').addEventListener('click', function() {
+       
+      let corPadrao = "#e2e1de"
+
+       if (corPadrao === "e2e1de"){
+          document.body.style.backgroundColor = "#000000";
+          corPadrao = "#000000"
+       }
+       else{
+          document.body.style.backgroundColor = "#e2e1de";
+          corPadrao = "#e2e1de"
+       }
+     });
