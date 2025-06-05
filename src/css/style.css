@@ -43,7 +43,7 @@ header img {
   max-height: 78px;
   width: auto;
 }
-.hamburguer{
+.hamburguer {
   display: flex;
   flex-direction: row;
 }
@@ -572,7 +572,7 @@ nav a:hover,
 
 /* Objetivos */
 
-.conteudoObjetivos{
+.conteudoObjetivos {
   display: flex;
   flex-direction: row;
   justify-content: center;
@@ -580,11 +580,10 @@ nav a:hover,
   justify-content: space-around;
   margin: 2.5% 180px;
 }
-.imgObjetivo{
+.imgObjetivo {
   width: 20rem;
-  
 }
-.textoObjetivos{
+.textoObjetivos {
   display: flex;
   flex-direction: column;
   align-items: center;
@@ -592,14 +591,145 @@ nav a:hover,
   font-size: 22px;
   font-weight: 500;
 }
-.paragrafoObjetivos{
+.paragrafoObjetivos {
   margin-top: 5%;
 }
-.conteudoObjetivos2{
+.conteudoObjetivos2 {
   display: flex;
   flex-direction: row-reverse;
   justify-content: center;
   align-items: center;
   justify-content: space-around;
   margin: 2.5% 180px;
+}
+.beneficios {
+  display: flex;
+  flex-direction: row-reverse;
+  justify-content: center;
+  align-items: center;
+  justify-content: space-around;
+  margin: 2.5% 180px;
+  gap: 3rem;
+}
+.textobeneficios {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  width: 21rem;
+  font-size: 22px;
+  font-weight: 500;
+  transform: translateY(-70px);
+}
+.header-beneficios {
+  font-size: x-large;
+  text-align: center;
+  color: #ffffff;
+  background-color: #1d3557;
+}
+@media screen and (max-width: 913px) {
+  .conteudoObjetivos {
+    flex-direction: column;
+    text-align: center;
+    gap: 2rem;
+    padding: 0 1rem;
+  }
+  .imgObjetivo {
+    width: 15rem;
+    order: 1;
+  }
+  .textoObjetivos {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    width: 21rem;
+    font-size: 22px;
+    font-weight: 500;
+  }
+  .paragrafoObjetivos {
+    text-align: center;
+  }
+  .conteudoObjetivos2 {
+    flex-direction: column;
+    text-align: center;
+    gap: 2rem;
+    padding: 0 1rem;
+  }
+  /* --------------- */
+  .beneficios {
+    flex-direction: column;
+    text-align: center;
+    gap: 2rem;
+    padding: 0 1rem;
+  }
+  .textobeneficios {
+    margin-top: 2rem;
+    order: 2;
+    align-items: flex-start;
+    text-align: center;
+  }
+
+  .header-beneficios {
+    font-size: x-large;
+    text-align: center;
+    color: #ffffff;
+    background-color: #1d3557;
+  }
+  .imgbeneficios {
+    width: 15rem;
+    order: 1;
+  }
+}
+
+@media screen and (max-width: 360px) {
+  .textobeneficios {
+    width: 100%;
+    max-width: 100%;
+    box-sizing: border-box;
+    padding: 0 1rem;
+    word-wrap: break-word;
+    word-break: break-word;
+    overflow-wrap: break-word;
+  }
+
+  .textoObjetivos {
+    text-align: left;
+    max-width: 100%;
+    width: 100%;
+    box-sizing: border-box;
+    padding: 0 1rem;
+    word-wrap: break-word;
+    word-break: break-word;
+    overflow-wrap: break-word;
+  }
+
+  .paragrafoObjetivos {
+    word-wrap: break-word;
+    word-break: break-word;
+    overflow-wrap: break-word;
+    line-height: 1.4;
+  }
+
+  .text-title,
+  .item-beneficio-solucao span {
+    word-wrap: break-word;
+    word-break: break-word;
+    overflow-wrap: break-word;
+  }
+
+  .conteudoObjetivos,
+  .conteudoObjetivos2,
+  .beneficios {
+    margin: 2.5% 8px;
+    padding: 0 0.5rem;
+    max-width: 100%;
+    box-sizing: border-box;
+  }
+
+  /* Ajustar imagens para não quebrarem o layout */
+  .imgObjetivo,
+  .imgbeneficios {
+    width: 12rem;
+    max-width: 100%;
+    height: auto;
+  }
 }
