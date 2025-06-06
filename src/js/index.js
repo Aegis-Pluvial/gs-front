@@ -50,16 +50,16 @@ function handleGesture() {
 }
 const slidesData = [
   {
-    title: "alguma coisa",
-    content: "lorem ipsum"
+    title: "sensor de agua",
+    content: "O sensor de água detecta quando o nível da chuva começa a subir e, ao atingir um ponto crítico, aciona automaticamente uma pequena rampa retrátil instalada na frente das lojas. Essa rampa se levanta e bloqueia a entrada da água, forçando seu desvio para um sistema de escoamento conectado diretamente ao esgoto. Dessa forma, a água é impedida de invadir os estabelecimentos, sendo direcionada com segurança para o sistema de drenagem urbana."
   },
   {
-    title: "alguma coisa",
-    content: "lorem ipsum"
+    title: "Sistema de Alerta Sonoro para Enchentes",
+    content: "Nosso sistema de alerta consiste em sirenes estrategicamente posicionadas em áreas de risco, projetadas para emitir sinais sonoros de emergência sempre que houver ameaça de enchentes. O objetivo é garantir que a população seja avisada rapidamente, permitindo que tome as precauções necessárias para sua segurança."
   },
   {
-    title: "alguma coisa",
-    content: "lorem ipsum"
+    title: "Mapa de Previsão de Enchentes: Antecipando o Risco",
+    content: "Nosso sistema utiliza um mapa inteligente que prevê futuras enchentes com base em dados climáticos, níveis de rios e padrões de precipitação. Por meio de sensores e inteligência artificial, analisamos as condições do solo e a quantidade de chuva acumulada para indicar regiões com maior risco de alagamentos."
   }
 ];
 
@@ -177,4 +177,24 @@ const festaNoSite = document.getElementById("festa");
 
 if (festaNoSite) {
     festaNoSite.addEventListener("click", trocaDeCores);
+}
+function abrirInterface() {
+  document.getElementById("solucao1").style.display = "block";
+  
+}
+
+function fecharInterface() {
+  document.getElementById("solucao1").style.display = "none";
+ 
+  
+}
+
+function mostrarTexto(numero) {
+  const textos = {
+    1: "1 morte confirmada | Soluções Cabiveis a area: Drenagem de agua |Valor perdido por enchentes : R$ 100 milhões",
+    2: "4 morte confirmada | Soluções Cabiveis a area: Sistema de alerta |Valor perdido por enchentes : R$ 60 milhões",
+    3: "8 morte confirmada | Soluções Cabiveis a area: Drenagem de agua |Valor perdido por enchentes : R$ 200 mil",
+  };
+
+  document.getElementById("textoArea").innerHTML = textos[numero];
 }

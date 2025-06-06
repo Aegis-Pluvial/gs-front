@@ -40,12 +40,12 @@
     </header>
     <div class="nav-menu">
       <nav>
-        <a href="#">Solução</a>
-        <a href="#">Tecnologias</a>
-        <a href="#">Objetivo</a>
-        <a href="#">Benefícios</a>
-        <a href="#">Eficiência</a>
-        <a href="#">Público-alvo</a>
+        <a href="#solucaott">Solução</a>
+        <a href="#tec">Tecnologias</a>
+        <a href="#objetivos">Objetivo</a>
+        <a href="#bene">Benefícios</a>
+        <a href="#efic">Eficiência</a>
+        <a href="#publi">Público-alvo</a>
         <a href="./src/pages/quiz.html">Quiz</a>
       </nav>
     </div>
@@ -58,11 +58,12 @@
         controls
       ></video>
     </div>
+    
     <!-- Fim do video -->
 
     <!-- Solução  -->
   <div class="background2">
-    <div class="titulo-solucao">
+    <div class="titulo-solucao" id="solucaott">
       <h1>Nossa Solução</h1>
     </div>
     
@@ -128,6 +129,7 @@
             </div>
           </div>
 
+
           <div class="cartao-solucao">
             <div class="cabecalho-cartao-solucao bg-gradiente-verde">
               <div class="icone-cartao-solucao">
@@ -157,13 +159,47 @@
             </div>
           </div>
         </div>
+        
+        </div>
+        
+        <div class="mapaSP">
+          <h1>Mapa ilustrativo</h1>
+          <p>clique no botão abaixo para abrir</p>
+          <button id="sumir" onclick="abrirInterface()">Solução</button >
+          
+          <div class="mapa-sp" id="solucao1" onclick="fecharInterface">
+            <div class="columns">
+              <div class="imagemSp">
+                <img src="./src/assets/saopaulo.webp" alt="mapa de São paulo" />
+                <br /><br />
+                <button class="close" onclick="fecharInterface()">Fechar</button id="fechar" >
+              </div>
+    
+
+              
+              <div class="textobotao">
+                <div class="botao1">
+                <button onclick="mostrarTexto(1)">Zona leste</button>
+              </div>
+              <div class="botao2">
+                <button onclick="mostrarTexto(2)">Zona Sul</button>
+              </div>
+              <div class="botao3">
+                <button onclick="mostrarTexto(3)">Zona Norte</button>
+              </div>
+                <div class="text-area" id="textoArea">
+                  Clique para saber as estatisticas das areas mencionadas
+                </div>
+              </div>
+            </div>
+          </div>
         </div>
     </section>
   </div>
   <!-- fim da solução  -->
 
   
-  <section class="tecnologia">
+  <section class="tecnologia" id="tec">
     <h1 class="texto-tec">Tecnologias</h1>
     
     <div class="carousel-text-container"> 
@@ -171,8 +207,8 @@
         <div class="carousel-container">
           <div class="carousel-wrapper" id="carousel">
             <img src="./src/assets/sensorAgua.webp" class="carousel-image" alt="Sensores de Água" data-slide="0">
-            <img src="./src/assets/sensorAgua.webp" class="carousel-image" alt="Sistema IoT" data-slide="1">
-            <img src="./src/assets/sensorAgua.webp" class="carousel-image" alt="Inteligência Artificial" data-slide="2">
+            <img src="./src/assets/alertaEnchente.webp" class="carousel-image" alt="Sistema alerta" data-slide="1">
+            <img src="./src/assets/mapeamentoSP.jpg" class="carousel-image" alt="Inteligência Artificial" data-slide="2">
           </div>
         
           <button class="arrow left" onclick="prevSlide()">&#10094;</button>
@@ -220,7 +256,7 @@
  
 
 
-  <section class="beneficiosSection">
+  <section class="beneficiosSection" id="bene">
 
     <div class="header-beneficios">
     <h1>
@@ -243,7 +279,7 @@
 
 <h1 class="texto-tec">Eficiência</h1>
 
- <section class="Eficiencia">
+<section class="Eficiencia" id="efic">
     
     <div class="cards">
       <div class="cardEficiencia">
@@ -264,6 +300,17 @@
         <p class="texto-cartao-solucao">Padronize suas operações com alertas antecipados e rotas de ação claras, minimizando erros, retrabalho e o impacto de eventos críticos.</p>
       </div>
     </div>
+  </section>
+  <hr>
+  <section class="publico" id="publi">
+    <h1 class="titulo-publico">Público-alvo</h1>
+    <p class="paragrafoPubli">Quem é o nosso publico alvo?</p>
+    <h2 class="h2publi">Nosso público-alvo são as pessoas que sofrem com as enchentes. São famílias, trabalhadores e comunidades inteiras que enfrentam desafios causados pelos alagamentos, desde a perda de bens até a necessidade de recomeçar do zero. Nosso compromisso é oferecer apoio, soluções e esperança para aqueles que vivem essa realidade.
+      Nosso lema é claro: ajudá-las. Queremos ser uma fonte de informação, suporte e inovação para minimizar os impactos das enchentes e auxiliar na reconstrução da vida dessas pessoas.</h2>
+      <p class="paragrafoPubli">para que cenas como essas não aconteça novamente:</p>
+      <iframe class="videopubli" width="560" height="315" src="https://www.youtube.com/embed/8SCz7i8F4aM" 
+frameborder="0" allowfullscreen></iframe>
+
   </section>
 
     <script src="./src/js/index.js"></script>
