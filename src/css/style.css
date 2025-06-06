@@ -572,6 +572,7 @@ nav a:hover,
 
 /* Objetivos */
 
+
 .conteudoObjetivos {
   display: flex;
   flex-direction: row;
@@ -604,7 +605,7 @@ nav a:hover,
 }
 .beneficios {
   display: flex;
-  flex-direction: row-reverse;
+  flex-direction: row;
   justify-content: center;
   align-items: center;
   justify-content: space-around;
@@ -732,4 +733,27 @@ nav a:hover,
     max-width: 100%;
     height: auto;
   }
+}
+
+.cards{
+  display: flex;
+  flex-direction: row;
+  justify-content: space-around;
+}
+.cardEficiencia{
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  max-width: 350px;
+  height: auto;
+  padding: 32px;
+  background-color: #f1f1f1;
+  border-radius: 32px;
+}
+
+.imgEficiencia{
+  height: 96px;
+  width: 96px;
+  display: flex;
+  justify-content: center;
 }
