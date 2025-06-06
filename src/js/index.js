@@ -142,12 +142,13 @@ let festaIntervalId = null;
 
 function trocaDeCores() {
 
+  alert("a festa vai durar 6 segundos")
     if (festaIntervalId !== null) {
         clearInterval(festaIntervalId);
     }
 
     let repeticoes = 0;
-    const maxRepeticoes = 30;
+    const maxRepeticoes = 15;
     const intervaloEntreCores = 350; 
     let i = 0;
 
