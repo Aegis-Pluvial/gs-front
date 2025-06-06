@@ -1105,15 +1105,13 @@ footer p {
   max-width: 800px;
   text-align: center;
 }
-/* Adicione este CSS ao final do seu arquivo style.css */
 
-/* Container responsivo para o vídeo */
 .video-container {
   position: relative;
   width: 100%;
-  max-width: 800px; /* Aumentei a largura máxima */
+  max-width: 800px;
   margin: 0 auto;
-  padding-bottom: 45%; /* Proporção mais retangular (16:7.2 aproximadamente) */
+  padding-bottom: 45%;
   height: 0;
   overflow: hidden;
 }
@@ -1130,9 +1128,9 @@ footer p {
 .video-container {
   position: relative;
   width: 100%;
-  max-width: 900px; /* Ainda mais largo */
+  max-width: 900px;
   margin: 0 auto;
-  padding-bottom: 35%; /* Proporção bem mais achatada - retângulo deitado */
+  padding-bottom: 35%;
   height: 0;
   overflow: hidden;
 }
@@ -1146,7 +1144,6 @@ footer p {
   border: 0;
 }
 
-/* Media queries para diferentes tamanhos de tela */
 @media screen and (max-width: 768px) {
   .video-container {
     max-width: 100%;
@@ -1171,5 +1168,175 @@ footer p {
   }
   .paragrafoPubli {
     height: 6rem;
+  }
+}
+
+html,
+body {
+  overflow-x: hidden;
+  max-width: 100%;
+}
+
+.video video {
+  display: block;
+  margin: 10rem auto 4rem;
+  width: 95%;
+  max-width: 800px;
+  height: auto;
+  transition: box-shadow 0.3s;
+}
+
+.paragrafoPubli {
+  text-align: center;
+  margin-top: 1rem;
+  font-size: xx-large;
+  height: auto;
+  min-height: 4rem;
+  margin-bottom: 2rem;
+}
+
+@media screen and (max-width: 768px) {
+  .video {
+    padding: 0 1rem;
+  }
+
+  .video video {
+    width: 100%;
+    margin: 8rem auto 3rem;
+  }
+
+  .paragrafoPubli {
+    height: auto;
+    min-height: 3rem;
+    margin-bottom: 1.5rem;
+  }
+}
+
+@media screen and (max-width: 480px) {
+  .video {
+    padding: 0 0.5rem;
+  }
+
+  .video video {
+    width: 100%;
+    margin: 7rem auto 2rem;
+  }
+
+  .paragrafoPubli {
+    height: auto;
+    min-height: 2rem;
+    margin-bottom: 1rem;
+    font-size: x-large;
+  }
+}
+
+@media screen and (max-width: 390px) {
+  .video {
+    padding: 0 0.5rem;
+  }
+
+  .video video {
+    width: 100%;
+    margin: 6rem auto 2rem;
+  }
+
+  .paragrafoPubli {
+    height: auto;
+    min-height: 2rem;
+    margin-bottom: 1rem;
+    font-size: large;
+  }
+}
+
+@media screen and (max-width: 393px) {
+  * {
+    max-width: 100%;
+    box-sizing: border-box;
+  }
+
+  .video {
+    padding: 0 0.5rem;
+  }
+
+  .video video {
+    width: 100%;
+    margin: 6rem auto 2rem;
+  }
+
+  .paragrafoPubli {
+    height: auto;
+    min-height: 2rem;
+    margin-bottom: 1rem;
+    font-size: large;
+  }
+
+  .conteudoObjetivos,
+  .conteudoObjetivos2,
+  .beneficios {
+    margin: 2.5% 0.5rem;
+    padding: 0 0.25rem;
+  }
+
+  .mapaSP {
+    margin: 0 0.5rem;
+    max-width: calc(100% - 1rem);
+  }
+
+  .secao-solucoes {
+    margin: 0 0.5rem;
+  }
+
+  .carousel-text-container {
+    padding: 0 0.5rem;
+    max-width: 100%;
+  }
+
+  .carousel-container {
+    max-width: 100%;
+  }
+
+  .imgObjetivo,
+  .imgbeneficios {
+    width: 80%;
+    max-width: 200px;
+  }
+
+  .textoObjetivos,
+  .textobeneficios {
+    width: 100%;
+    max-width: 100%;
+    word-wrap: break-word;
+    overflow-wrap: break-word;
+  }
+}
+
+@media screen and (max-width: 360px) {
+  .video video {
+    width: 100%;
+    margin: 6rem auto 2rem;
+  }
+
+  .paragrafoPubli {
+    height: auto;
+    min-height: 2rem;
+    margin-bottom: 1rem;
+    font-size: medium;
+  }
+}
+
+.carousel-text-container,
+.grade-solucoes,
+.cards,
+.conteudoObjetivos,
+.conteudoObjetivos2,
+.beneficios {
+  max-width: 100%;
+  overflow-x: hidden;
+}
+
+@media screen and (max-width: 393px) {
+  .video-container {
+    margin: 0 0.5rem;
+    max-width: calc(100% - 1rem);
   }
 }
